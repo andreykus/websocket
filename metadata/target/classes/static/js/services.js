@@ -1,6 +1,10 @@
-angular.module('springPortfolio.services', [])
+/**
+ * Created by bush on 14.07.2016.
+ */
+angular.module('winsocket.services', [])
     //.constant('sockJsProtocols', ["xhr-streaming", "xhr-polling"]) // only allow XHR protocols
     .constant('sockJsProtocols', [])
+    //this client for rest services Websocket impl Stomp (in param: protocol, defered)
     .factory('StompClient', ['sockJsProtocols', '$q', function (sockJsProtocols, $q) {
         var stompClient;
         var wrappedSocket = {
@@ -12,6 +16,7 @@ angular.module('springPortfolio.services', [])
                     stompClient = Stomp.over(new SockJS(url));
                 }
             },
+            //connect to rest serv - winsocket
             connect: function () {
                 return $q(function (resolve, reject) {
                     if (!stompClient) {
@@ -25,9 +30,11 @@ angular.module('springPortfolio.services', [])
                     }
                 });
             },
+            //disconnect to rest serv - winsocket
             disconnect: function() {
                 stompClient.disconnect();
             },
+            //consumer to rest serv - winsocket
             subscribe: function (destination) {
                 var deferred = $q.defer();
                 if (!stompClient) {
@@ -39,6 +46,7 @@ angular.module('springPortfolio.services', [])
                 }
                 return deferred.promise;
             },
+            //consumer to rest serv - winsocket
             subscribeSingle: function (destination) {
                 return $q(function (resolve, reject) {
                     if (!stompClient) {
@@ -50,39 +58,10 @@ angular.module('springPortfolio.services', [])
                     }
                 });
             },
+            //send message to rest serv - winsocket
             send: function (destination, headers, object) {
                 stompClient.send(destination, headers, object);
             }
         };
         return wrappedSocket;
-    }])
-    .factory('TradeService', ['StompClient', '$q', function (stompClient, $q) {
-
-        return {
-            connect: function (url) {
-                stompClient.init(url);
-                return stompClient.connect().then(function (frame) {
-                    return frame.headers['user-name'];
-                });
-            },
-            disconnect: function() {
-                stompClient.disconnect();
-            },
-            loadPositions: function() {
-                return stompClient.subscribeSingle("/app/positions");
-            },
-            fetchQuoteStream: function () {
-                return stompClient.subscribe("/topic/price.stock.*");
-            },
-            fetchPositionUpdateStream: function () {
-                return stompClient.subscribe("/user/queue/position-updates");
-            },
-            fetchErrorStream: function () {
-                return stompClient.subscribe("/user/queue/errors");
-            },
-            sendTradeOrder: function(tradeOrder) {
-                return stompClient.send("/app/trade", {}, JSON.stringify(tradeOrder));
-            }
-        };
-
     }]);

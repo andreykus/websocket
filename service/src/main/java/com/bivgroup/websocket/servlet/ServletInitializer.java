@@ -1,6 +1,7 @@
 package com.bivgroup.websocket.servlet;
 
-import com.bivgroup.meweb.sogcablife.app.SogCabLifeApplication;
+
+import com.bivgroup.websocket.app.SogCabLifeApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.web.SpringBootServletInitializer;
 

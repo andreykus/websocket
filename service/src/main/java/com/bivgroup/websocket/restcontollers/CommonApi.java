@@ -1,6 +1,5 @@
 package com.bivgroup.websocket.restcontollers;
 
-import com.bivgroup.meweb.sogcablife.domain.TestApi;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -18,9 +17,9 @@ public class CommonApi {
     @RequestMapping("/test")
     public
     @ResponseBody
-    TestApi greeting(@RequestParam(value = "message",required=true, defaultValue = "Hellow World") String message) {
+   String greeting(@RequestParam(value = "message",required=true, defaultValue = "Hellow World") String message) {
        // model.addAttribute("name", message);
-        return new TestApi(message);
+        return null;
     }
 
     //@Valid @RequestBody

@@ -1,2 +1,2 @@
 var springPortfolio = angular
-    .module('springPortfolio', ['springPortfolio.controllers', 'springPortfolio.services']);
+    .module('springPortfolio', ['springPortfolio.controllers', 'winsocketImpl.services']);

@@ -1,6 +1,9 @@
 package com.bivgroup.websocket.app;
 
+
 import com.bivgroup.websocket.servlet.FileServlet;
+import com.bivgroup.websocket.websocket.WebsocketServer;
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -16,9 +19,11 @@ import org.springframework.web.WebApplicationInitializer;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Properties;
 
 @SpringBootApplication
 @EnableAutoConfiguration
@@ -37,6 +42,13 @@ import java.util.Map;
 
 public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter implements WebApplicationInitializer {
 
+    private static org.apache.logging.log4j.Logger logger = LogManager.getLogger(SogCabLifeApplication.class);
+
+    private static final String LOG4J_PROPS_PATH = "conf/log4j.properties";
+    private static final String SERVER_PROPS_PATH = "conf/server.properties";
+    private static final String CONSUMER_PROPS_PATH = "conf/consumer.properties";
+    private static final String PRODUCER_PROPS_PATH = "conf/producer.properties";
+
     @Autowired
     private ResourceServerProperties sso;
 
@@ -48,6 +60,20 @@ public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter impl
         //super.onStartup(servletContext);
     }
 
+
+    private static Properties loadPropsFromFile(String filename) {
+        try {
+            Properties props = new Properties();
+            props.load(new FileInputStream(filename));
+            return props;
+        } catch (java.io.IOException e) {
+            logger.error("Failed to load properties from file {}, exiting: {}", filename, e.getMessage());
+            System.exit(-1);
+        }
+        return null;
+    }
+
+
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(SogCabLifeApplication.class, args);
         String[] beanNames = ctx.getBeanDefinitionNames();
@@ -55,6 +81,14 @@ public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter impl
         for (String beanName : beanNames) {
             System.out.println(beanName);
         }
+
+        //PropertyConfigurator.configure(LOG4J_PROPS_PATH);
+        Properties wsProps = loadPropsFromFile(SERVER_PROPS_PATH);
+        Properties consumerProps = loadPropsFromFile(CONSUMER_PROPS_PATH);
+        Properties producerProps = loadPropsFromFile(PRODUCER_PROPS_PATH);
+
+        WebsocketServer server = new WebsocketServer(wsProps, consumerProps, producerProps);
+        server.run();
     }
 
 //    @Bean
