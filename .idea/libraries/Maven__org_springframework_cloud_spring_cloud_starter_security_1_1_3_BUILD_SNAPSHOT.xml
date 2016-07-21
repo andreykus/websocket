@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.springframework.cloud:spring-cloud-starter-security:1.1.3.BUILD-SNAPSHOT">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-security/1.1.3.BUILD-SNAPSHOT/spring-cloud-starter-security-1.1.3.BUILD-20160720.064206-62.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-security/1.1.3.BUILD-SNAPSHOT/spring-cloud-starter-security-1.1.3.BUILD-20160720.064206-62-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$MAVEN_REPOSITORY$/org/springframework/cloud/spring-cloud-starter-security/1.1.3.BUILD-SNAPSHOT/spring-cloud-starter-security-1.1.3.BUILD-20160720.064206-62-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
