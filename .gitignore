@@ -1,3 +1,9 @@
 /service/.idea
 .idea
 target
+/.idea/
+/service/.idea/
+/metadata/target/
+/service/target/
+/service/logs/
+/service/log/
