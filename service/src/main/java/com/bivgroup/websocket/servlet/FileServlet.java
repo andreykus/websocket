@@ -72,7 +72,7 @@ public class FileServlet extends HttpServlet {
             // Get base path (path to get all resources from) as init parameter.
             this.basePath = getInitParameter("basePath");
         }
-        logger.info(String.format("Metadata catalog for FileServlet servlet: %s ",this.basePath));
+        logger.info("Metadata catalog for FileServlet servlet: {} ",this.basePath);
         // Validate base path.
         if (this.basePath == null) {
             throw new ServletException("FileServlet init param 'basePath' is required.");

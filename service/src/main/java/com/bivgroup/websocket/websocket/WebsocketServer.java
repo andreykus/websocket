@@ -16,34 +16,26 @@
 
 package com.bivgroup.websocket.websocket;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.eclipse.jetty.server.*;
 import org.eclipse.jetty.servlet.ServletContextHandler;
 import org.eclipse.jetty.util.ssl.SslContextFactory;
 import org.eclipse.jetty.websocket.jsr356.server.deploy.WebSocketServerContainerInitializer;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 
 import javax.websocket.server.ServerContainer;
 import java.util.Properties;
 
+/**
+ * Class WebsocketServer Server on jetty servlet server
+ */
 public class WebsocketServer {
     private static Logger logger = LogManager.getLogger(WebsocketServer.class);
 
-
-    private static final String DEFAULT_PORT = "8080";
-    private static final String DEFAULT_SSL_PORT = "8443";
-    private static final String DEFAULT_PROTOCOLS = "TLSv1.2";
-    private static final String DEFAULT_CIPHERS = "TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_RC4_128_SHA,TLS_RSA_WITH_AES_256_CBC_SHA";
-
     private final Properties wsProps;
-    private final Properties consumerProps;
-    private final Properties producerProps;
 
-    public WebsocketServer(Properties wsProps, Properties consumerProps, Properties producerProps) {
+    public WebsocketServer(Properties wsProps) {
         this.wsProps = wsProps;
-        this.consumerProps = consumerProps;
-        this.producerProps = producerProps;
     }
 
     private SslContextFactory newSslContextFactory() {
@@ -52,9 +44,10 @@ public class WebsocketServer {
         String keyStorePassword = wsProps.getProperty("ws.ssl.keyStorePassword");
         String trustStorePath = wsProps.getProperty("ws.ssl.trustStorePath", keyStorePath);
         String trustStorePassword = wsProps.getProperty("ws.ssl.trustStorePassword", keyStorePassword);
-        String[] protocols = wsProps.getProperty("ws.ssl.protocols", DEFAULT_PROTOCOLS).split(",");
-        String[] ciphers = wsProps.getProperty("ws.ssl.ciphers", DEFAULT_CIPHERS).split(",");
+        String[] protocols = wsProps.getProperty("ws.ssl.protocols", Constants.DEFAULT_PROTOCOLS).split(",");
+        String[] ciphers = wsProps.getProperty("ws.ssl.ciphers", Constants.DEFAULT_CIPHERS).split(",");
         String clientAuth = wsProps.getProperty("ws.ssl.clientAuth", "none");
+
 
         SslContextFactory sslContextFactory = new SslContextFactory();
         sslContextFactory.setKeyStorePath(keyStorePath);
@@ -64,7 +57,7 @@ public class WebsocketServer {
         sslContextFactory.setTrustStorePassword(trustStorePassword);
         sslContextFactory.setIncludeProtocols(protocols);
         sslContextFactory.setIncludeCipherSuites(ciphers);
-        switch(clientAuth) {
+        switch (clientAuth) {
             case "required":
                 logger.info("Client auth required.");
                 sslContextFactory.setNeedClientAuth(true);
@@ -85,13 +78,13 @@ public class WebsocketServer {
     }
 
     private ServerConnector newSslServerConnector(Server server) {
-        Integer securePort = Integer.parseInt(wsProps.getProperty("ws.ssl.port", DEFAULT_SSL_PORT));
+        Integer securePort = Integer.parseInt(wsProps.getProperty("ws.ssl.port", Constants.DEFAULT_SSL_PORT));
         HttpConfiguration https = new HttpConfiguration();
         https.setSecureScheme("https");
         https.setSecurePort(securePort);
-        https.setOutputBufferSize(32768);
-        https.setRequestHeaderSize(8192);
-        https.setResponseHeaderSize(8192);
+        https.setOutputBufferSize(Constants.BUFFER_SIZE);
+        https.setRequestHeaderSize(Constants.HEADER_SIZE);
+        https.setResponseHeaderSize(Constants.HEADER_SIZE);
         https.setSendServerVersion(true);
         https.setSendDateHeader(false);
         https.addCustomizer(new SecureRequestCustomizer());
@@ -108,10 +101,10 @@ public class WebsocketServer {
         try {
             Server server = new Server();
             ServerConnector connector = new ServerConnector(server);
-            connector.setPort(Integer.parseInt(wsProps.getProperty("ws.port", DEFAULT_PORT)));
+            connector.setPort(Integer.parseInt(wsProps.getProperty("ws.port", Constants.DEFAULT_PORT)));
             server.addConnector(connector);
 
-            if(Boolean.parseBoolean(wsProps.getProperty("ws.ssl", "false"))) {
+            if (Boolean.parseBoolean(wsProps.getProperty("ws.ssl", "false"))) {
                 server.addConnector(newSslServerConnector(server));
             }
 
@@ -121,11 +114,11 @@ public class WebsocketServer {
 
             ServerContainer wsContainer = WebSocketServerContainerInitializer.configureContext(context);
             String inputTransformClassName =
-                    wsProps.getProperty("ws.inputTransformClass", "us.b3k.kafka.ws.transforms.Transform");
+                    wsProps.getProperty("ws.inputTransformClass", "ws.transforms.Transform");
             String outputTransformClassName =
-                    wsProps.getProperty("ws.outputTransformClass", "us.b3k.kafka.ws.transforms.Transform");
+                    wsProps.getProperty("ws.outputTransformClass", "ws.transforms.Transform");
 
-
+            //TODO Init Producer and Consumer
             wsContainer.addEndpoint(WebsocketEndpoint.class);
 
             server.start();

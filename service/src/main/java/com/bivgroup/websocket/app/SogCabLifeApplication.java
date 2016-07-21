@@ -4,6 +4,7 @@ package com.bivgroup.websocket.app;
 import com.bivgroup.websocket.servlet.FileServlet;
 import com.bivgroup.websocket.websocket.WebsocketServer;
 import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -42,21 +43,17 @@ import java.util.Properties;
 
 public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter implements WebApplicationInitializer {
 
-    private static org.apache.logging.log4j.Logger logger = LogManager.getLogger(SogCabLifeApplication.class);
+    private static Logger logger = LogManager.getLogger(SogCabLifeApplication.class);
 
     private static final String LOG4J_PROPS_PATH = "conf/log4j.properties";
     private static final String SERVER_PROPS_PATH = "conf/server.properties";
-    private static final String CONSUMER_PROPS_PATH = "conf/consumer.properties";
-    private static final String PRODUCER_PROPS_PATH = "conf/producer.properties";
 
     @Autowired
     private ResourceServerProperties sso;
 
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
-
         servletContext.addServlet("dispatchServlet", new FileServlet());
-
         //super.onStartup(servletContext);
     }
 
@@ -84,10 +81,7 @@ public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter impl
 
         //PropertyConfigurator.configure(LOG4J_PROPS_PATH);
         Properties wsProps = loadPropsFromFile(SERVER_PROPS_PATH);
-        Properties consumerProps = loadPropsFromFile(CONSUMER_PROPS_PATH);
-        Properties producerProps = loadPropsFromFile(PRODUCER_PROPS_PATH);
-
-        WebsocketServer server = new WebsocketServer(wsProps, consumerProps, producerProps);
+        WebsocketServer server = new WebsocketServer(wsProps);
         server.run();
     }
 

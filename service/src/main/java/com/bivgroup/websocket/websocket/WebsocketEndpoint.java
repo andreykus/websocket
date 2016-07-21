@@ -27,20 +27,26 @@ import java.io.IOException;
 import java.text.MessageFormat;
 import java.util.Map;
 
+
+/**
+ * Process Context endpoin websocket
+ */
+
 @ServerEndpoint(
-    value = "/v2/broker/",
-    subprotocols = {"kafka-text", "kafka-binary"},
-    decoders = {BinaryMessage.BinaryMessageDecoder.class},
-    encoders = {BinaryMessage.BinaryMessageEncoder.class},
-    configurator = WebsocketEndpoint.Configurator.class
+        value = Constants.API_CONTEXT,
+        subprotocols = {"kafka-text", "kafka-binary"},
+        decoders = {BinaryMessage.BinaryMessageDecoder.class, TextMessage.TextMessageDecoder.class},
+        encoders = {BinaryMessage.BinaryMessageEncoder.class, TextMessage.TextMessageEncoder.class},
+        configurator = WebsocketEndpoint.Configurator.class
 )
 public class WebsocketEndpoint {
 
+    private static Logger logger = LogManager.getLogger(WebsocketEndpoint.class);
 
-    private static Logger logger = LogManager.getLogger( WebsocketEndpoint.class);
-
-    public static Map<String, String> getQueryMap(String query)
-    {
+    /**
+     * Parser param context to map
+     */
+    public static Map<String, String> getQueryMap(String query) {
         Map<String, String> map = Maps.newHashMap();
         if (query != null) {
             String[] params = query.split("&");
@@ -52,41 +58,66 @@ public class WebsocketEndpoint {
         return map;
     }
 
-
-
+    /**
+     * Where connect to socket from external client
+     */
     @OnOpen
     @SuppressWarnings("unchecked")
     public void onOpen(final Session session) {
         String groupId = "";
         String topics = "";
-
+        logger.debug("Opening new session {}", session.getId());
         Map<String, String> queryParams = getQueryMap(session.getQueryString());
         if (queryParams.containsKey("group.id")) {
             groupId = queryParams.get("group.id");
+            logger.debug("Session {} group.id are {}", session.getId(), groupId);
         }
-
-        logger.debug("Opening new session {}", session.getId());
         if (queryParams.containsKey("topics")) {
             topics = queryParams.get("topics");
             logger.debug("Session {} topics are {}", session.getId(), topics);
-
+            //TODO Insert Consummer submit method
         }
     }
 
+    /**
+     * Where close session
+     */
     @OnClose
     public void onClose(final Session session) {
-
+        //TODO Close Producer
+        //TODO Close Consummer
     }
 
+    /**
+     * Where message recived
+     */
     @OnMessage
     public void onMessage(final BinaryMessage message, final Session session) {
-        logger.trace("Received binary message: topic - {}; message - {}",
-                  message.getTopic(), message.getMessage());
+        logger.debug("BinaryMessage Received binary message: topic - {}; message - {}",
+                message.getTopic(), message.getMessage());
+        //TODO Insert Producer send method
+        RemoteEndpoint.Async remoteEndpoint= session.getAsyncRemote();
+        remoteEndpoint.sendObject(message);
+    }
 
+    /**
+     * Where message recived
+     */
+    @OnMessage
+    public void onMessage(final TextMessage message, final Session session) {
+        logger.debug("TextMessage Received binary message: topic - {}; message - {}",
+                message.getTopic(), message.getMessage());
+        //TODO Insert Producer
+        //TODO replace This to Consumer Processor init
+
+        //this echo
+        RemoteEndpoint.Async remoteEndpoint= session.getAsyncRemote();
+        remoteEndpoint.sendObject(message);
     }
 
 
     private void closeSession(Session session, CloseReason reason) {
+        //session.close(new CloseReason(CloseReason.CloseCodes.CLOSED_ABNORMALLY, e.getMessage()));
         try {
             session.close(reason);
         } catch (IOException e) {
@@ -94,12 +125,13 @@ public class WebsocketEndpoint {
         }
     }
 
-    public static class Configurator extends ServerEndpointConfig.Configurator
-    {
+    /**
+     * Configurate endPoint
+     */
+    public static class Configurator extends ServerEndpointConfig.Configurator {
 
         @Override
-        public <T> T getEndpointInstance(Class<T> endpointClass) throws InstantiationException
-        {
+        public <T> T getEndpointInstance(Class<T> endpointClass) throws InstantiationException {
             T endpoint = super.getEndpointInstance(endpointClass);
 
             if (endpoint instanceof WebsocketEndpoint) {
