@@ -1,5 +1,0 @@
-[DEBUG] 2016-07-21 17:07:10.899 [qtp968684233-54] WebsocketEndpoint - Opening new session websocket-3
-[DEBUG] 2016-07-21 17:07:10.903 [qtp968684233-54] WebsocketEndpoint - Session websocket-3 group.id are 2
-[DEBUG] 2016-07-21 17:07:10.903 [qtp968684233-54] WebsocketEndpoint - Session websocket-3 topics are test1
-[DEBUG] 2016-07-21 17:07:12.031 [qtp968684233-42] WebsocketEndpoint - TextMessage Received binary message: topic - ; message - "ddd1111121111111"
-[DEBUG] 2016-07-21 17:07:12.615 [qtp968684233-54] WebsocketEndpoint - TextMessage Received binary message: topic - ; message - "ddd1111121111111"

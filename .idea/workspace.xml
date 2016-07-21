@@ -2,25 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dfca71d8-9acc-4e8a-bd35-ad7ca74d404d" name="Default" comment="strat">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-20-04-29.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-20-04-30.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-20-11-19.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-20-11-41.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-13.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-15.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-17.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-37.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-40.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-51.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-57.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-02-58.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-03-42.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-04-09.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-04-10.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-05-03.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-05-04.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-05-05.gz" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/log/archive/rollingfile.log.2016-07-21-05-06.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-20-04-29.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-20-04-30.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-20-11-19.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-20-11-41.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-13.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-15.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-17.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-37.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-40.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-51.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-57.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-02-58.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-03-42.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-04-09.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-04-10.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-05-03.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-05-04.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-05-05.gz" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\log\archive\rollingfile.log.2016-07-21-05-06.gz" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_annotation_javax_annotation_api_1_2.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_websocket_javax_websocket_api_1_0.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_annotations_9_2_15_v20160210.xml" />
@@ -47,11 +47,8 @@
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_security_1_1_3_BUILD_SNAPSHOT.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_oauth2_1_1_3_BUILD_SNAPSHOT.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_security_1_1_3_BUILD_SNAPSHOT.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/logs/filelog.log" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/logs/rollingfile.log" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_security_1_1_1_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_starter_oauth2_1_1_1_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_starter_security_1_1_1_BUILD_SNAPSHOT.xml" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\logs\filelog.log" />
+      <change type="NEW" beforePath="" afterPath="C:\projects\websocket\service\logs\rollingfile.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_1_1_2_BUILD_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_commons_1_1_2_BUILD_SNAPSHOT.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_1_1_2_BUILD_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_context_1_1_2_BUILD_SNAPSHOT.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_1_1_2_BUILD_SNAPSHOT.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_starter_1_1_2_BUILD_SNAPSHOT.xml" />
@@ -892,7 +889,7 @@
       <workItem from="1467099484598" duration="14000" />
       <workItem from="1468477945493" duration="11166000" />
       <workItem from="1468999956758" duration="7236000" />
-      <workItem from="1469098744768" duration="10547000" />
+      <workItem from="1469098744768" duration="10599000" />
     </task>
     <task id="LOCAL-00001" summary="strat">
       <created>1468506825345</created>
@@ -918,11 +915,17 @@
       <option name="project" value="LOCAL" />
       <updated>1469110224273</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="strat">
+      <created>1469110443539</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1469110443539</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34878000" />
+    <option name="totallyTimeSpent" value="34930000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
