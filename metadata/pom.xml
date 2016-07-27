@@ -7,7 +7,7 @@
     <artifactId>websocket-metadata</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>websocket-metadata</name>
-    <description>websocket profile</description>
+    <description>websocket-metadata</description>
     <packaging>jar</packaging>
 
     <properties>
