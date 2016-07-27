@@ -5,122 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="dfca71d8-9acc-4e8a-bd35-ad7ca74d404d" name="Default" comment="strat">
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\.name" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\copyright\profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\dictionaries\bush.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__aopalliance_aopalliance_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__ch_qos_logback_logback_classic_1_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__ch_qos_logback_logback_core_1_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_fasterxml_classmate_1_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_core_2_6_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_fasterxml_jackson_core_jackson_databind_2_6_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_github_fge_btf_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_github_fge_jackson_coreutils_1_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_github_fge_json_patch_1_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_github_fge_msg_simple_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_google_code_findbugs_jsr305_2_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__com_google_guava_guava_18_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__commons_codec_commons_codec_1_9.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__javax_annotation_javax_annotation_api_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__javax_servlet_javax_servlet_api_3_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__javax_validation_validation_api_1_1_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__javax_websocket_javax_websocket_api_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__junit_junit_4_12.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_apache_logging_log4j_log4j_api_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_apache_logging_log4j_log4j_core_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_core_8_0_32.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_el_8_0_32.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_logging_juli_8_0_32.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_apache_tomcat_embed_tomcat_embed_websocket_8_0_32.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_atteo_evo_inflector_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_bouncycastle_bcpkix_jdk15on_1_47.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_bouncycastle_bcprov_jdk15on_1_47.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_codehaus_jackson_jackson_core_asl_1_9_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_codehaus_jackson_jackson_mapper_asl_1_9_13.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_annotations_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_http_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_io_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_jndi_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_plus_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_security_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_server_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_servlet_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_util_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_webapp_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_jetty_xml_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_websocket_javax_websocket_client_impl_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_websocket_javax_websocket_server_impl_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_websocket_websocket_api_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_websocket_websocket_client_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_websocket_websocket_common_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_websocket_websocket_server_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_eclipse_jetty_websocket_websocket_servlet_9_2_15_v20160210.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_hamcrest_hamcrest_core_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_hamcrest_hamcrest_library_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_hibernate_hibernate_validator_5_2_4_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_mockito_mockito_core_1_10_19.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_objenesis_objenesis_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_ow2_asm_asm_5_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_ow2_asm_asm_commons_5_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_ow2_asm_asm_tree_5_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_slf4j_jcl_over_slf4j_1_7_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_slf4j_jul_to_slf4j_1_7_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_slf4j_log4j_over_slf4j_1_7_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_slf4j_slf4j_api_1_7_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_actuator_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_autoconfigure_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_actuator_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_cache_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_data_rest_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_logging_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_security_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_test_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_tomcat_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_validation_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_boot_spring_boot_starter_web_1_3_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_commons_1_1_2_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_context_1_1_2_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_security_1_1_3_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_starter_1_1_2_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_starter_oauth2_1_1_3_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_cloud_spring_cloud_starter_security_1_1_3_BUILD_SNAPSHOT.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_data_spring_data_commons_1_11_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_data_spring_data_rest_core_2_4_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_data_spring_data_rest_hal_browser_2_4_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_data_spring_data_rest_webmvc_2_4_4_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_hateoas_spring_hateoas_0_19_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_plugin_spring_plugin_core_1_2_0_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_restdocs_spring_restdocs_core_1_0_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_restdocs_spring_restdocs_mockmvc_1_0_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_security_oauth_spring_security_oauth2_2_0_9_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_security_spring_security_config_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_security_spring_security_core_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_security_spring_security_crypto_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_security_spring_security_jwt_1_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_security_spring_security_rsa_1_0_1_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_security_spring_security_web_4_0_3_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_aop_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_beans_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_context_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_context_support_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_core_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_expression_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_test_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_tx_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_web_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_springframework_spring_webmvc_4_2_5_RELEASE.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\libraries\Maven__org_yaml_snakeyaml_1_16.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="C:\projects\websocket\.idea\workspace.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="574400c8-95a3-4429-beb9-9f47c24dc5fb" name="Failed commit: Default" comment="strat">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/service/src/main/java/com/bivgroup/websocket/websocket/jetty/AbstractMessage.java" />
@@ -7713,13 +7598,9 @@
       <change type="DELETED" beforePath="C:\projects\websocket\service\src\main\java\com\bivgroup\websocket\websocket\WebsocketServer.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/src/main/java/com/bivgroup/websocket/app/SogCabLifeApplication.java" afterPath="$PROJECT_DIR$/service/src/main/java/com/bivgroup/websocket/app/SogCabLifeApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metadata/src/metadata/js/controllers.js" afterPath="$PROJECT_DIR$/metadata/src/metadata/js/controllers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metadata/static/js/controllers.js" afterPath="$PROJECT_DIR$/metadata/static/js/controllers.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metadata/pom.xml" afterPath="$PROJECT_DIR$/metadata/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/pom.xml" afterPath="$PROJECT_DIR$/service/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/run.sh" afterPath="$PROJECT_DIR$/service/run.sh" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/metadata/websocket-metadata.iml" afterPath="$PROJECT_DIR$/metadata/websocket-metadata.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/service/websocket-service.iml" afterPath="$PROJECT_DIR$/service/websocket-service.iml" />
     </list>
     <ignored path="websocket.iws" />
@@ -8096,10 +7977,6 @@
               <option name="myItemId" value="websocket" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="External Libraries" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -8108,144 +7985,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="static" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="websocket" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="metadata" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -8696,7 +8435,7 @@
       <workItem from="1469112467484" duration="993000" />
       <workItem from="1469186108552" duration="7092000" />
       <workItem from="1469428137447" duration="13082000" />
-      <workItem from="1469621099025" duration="9716000" />
+      <workItem from="1469621099025" duration="9853000" />
     </task>
     <task id="LOCAL-00001" summary="strat">
       <created>1468506825345</created>
@@ -8746,11 +8485,23 @@
       <option name="project" value="LOCAL" />
       <updated>1469112910400</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="strat">
+      <created>1469632182213</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1469632182213</updated>
+    </task>
+    <task id="LOCAL-00010" summary="strat">
+      <created>1469632321705</created>
+      <option name="number" value="00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1469632321705</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66942000" />
+    <option name="totallyTimeSpent" value="67079000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
