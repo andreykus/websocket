@@ -1,6 +1,6 @@
 
 
-package com.bivgroup.websocket.websocket;
+package com.bivgroup.websocket.websocket.jetty;
 
 import org.apache.logging.log4j.LogManager;
 

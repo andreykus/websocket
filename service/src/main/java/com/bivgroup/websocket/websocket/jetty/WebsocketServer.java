@@ -14,7 +14,7 @@
     limitations under the License.
 */
 
-package com.bivgroup.websocket.websocket;
+package com.bivgroup.websocket.websocket.jetty;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

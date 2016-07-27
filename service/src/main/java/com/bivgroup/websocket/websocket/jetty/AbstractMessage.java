@@ -1,4 +1,4 @@
-package com.bivgroup.websocket.websocket;
+package com.bivgroup.websocket.websocket.jetty;
 
 public abstract class AbstractMessage {
     protected String topic;

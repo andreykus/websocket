@@ -1,4 +1,4 @@
-package com.bivgroup.websocket.websocket;
+package com.bivgroup.websocket.websocket.jetty;
 
 /**
  * Created by bush on 21.07.2016.

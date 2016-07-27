@@ -9,7 +9,7 @@
     <packaging>jar</packaging>
 
     <name>websocket-service</name>
-    <description>websocket profile</description>
+    <description>websocket-service</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -23,6 +23,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>1.7</java.version>
         <jetty.version>9.1.5.v20140505</jetty.version>
+        <org.springframework-version>4.2.3.RELEASE</org.springframework-version>
     </properties>
 
     <dependencies>
@@ -43,6 +44,20 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <artifactId>tomcat-embed-logging-juli</artifactId>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>tomcat-embed-websocket</artifactId>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>tomcat-embed-el</artifactId>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <dependency>
@@ -62,25 +77,23 @@
         </dependency>
 
 
-
         <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-config</artifactId>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-config</artifactId>-->
         <!--</dependency>-->
 
 
-
         <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-turbine-stream</artifactId>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-turbine-stream</artifactId>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>-->
         <!--</dependency>-->
         <!--<dependency>-->
-            <!--<groupId>org.springframework.cloud</groupId>-->
-            <!--<artifactId>spring-cloud-starter</artifactId>-->
+        <!--<groupId>org.springframework.cloud</groupId>-->
+        <!--<artifactId>spring-cloud-starter</artifactId>-->
         <!--</dependency>-->
 
 
@@ -94,13 +107,15 @@
         </dependency>
 
 
-
         <!--<dependency>-->
-            <!--<groupId>com.bivgroup.meweb.soglife.viewmodel.external</groupId>-->
-            <!--<artifactId>externalMethodProvider</artifactId>-->
-            <!--<version>01.01.01</version>-->
+        <!--<groupId>com.bivgroup.meweb.soglife.viewmodel.external</groupId>-->
+        <!--<artifactId>externalMethodProvider</artifactId>-->
+        <!--<version>01.01.01</version>-->
         <!--</dependency>-->
 
+
+
+        <!--common-->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -111,83 +126,145 @@
             <artifactId>log4j-core</artifactId>
             <version>2.1</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.5.3</version>
+        </dependency>
+        <!--servlet common-->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+            <scope>provided</scope>
+        </dependency>
 
-        <!--websocket-->
-                <dependency>
-                    <groupId>org.eclipse.jetty</groupId>
-                    <artifactId>jetty-server</artifactId>
-                    <version>${jetty.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>org.eclipse.jetty.websocket</groupId>
-                    <artifactId>javax-websocket-server-impl</artifactId>
-                    <version>${jetty.version}</version>
-                </dependency>
-                <dependency>
-                    <groupId>javax.websocket</groupId>
-                    <artifactId>javax.websocket-api</artifactId>
-                    <version>1.0</version>
-                </dependency>
+        <!--websocket common-->
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.0</version>
+            <scope>provided</scope>
+        </dependency>
 
 
-            </dependencies>
+        <!--websocket jetty-->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>${jetty.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.eclipse.jetty.websocket</groupId>
+            <artifactId>javax-websocket-server-impl</artifactId>
+            <version>${jetty.version}</version>
+            <scope>compile</scope>
+        </dependency>
 
-            <dependencyManagement>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.springframework.cloud</groupId>
-                        <artifactId>spring-cloud-dependencies</artifactId>
-                        <version>Brixton.BUILD-SNAPSHOT</version>
-                        <type>pom</type>
-                        <scope>import</scope>
-                    </dependency>
-                </dependencies>
-            </dependencyManagement>
+        <!--websocket spring-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>${org.springframework-version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>commons-logging</groupId>
+                    <artifactId>commons-logging</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-messaging</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-webmvc</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-websocket</artifactId>
+            <version>${org.springframework-version}</version>
+        </dependency>
+        <!-- Required when the "stomp-broker-relay" is enabled -->
+        <!--<dependency>-->
+            <!--<groupId>io.projectreactor</groupId>-->
+            <!--<artifactId>reactor-net</artifactId>-->
+            <!--<version>2.0.7.RELEASE</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>io.netty</groupId>-->
+            <!--<artifactId>netty-all</artifactId>-->
+            <!--<version>4.0.31.Final</version>-->
+        <!--</dependency>-->
 
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.springframework.boot</groupId>
-                        <artifactId>spring-boot-maven-plugin</artifactId>
-                    </plugin>
-                </plugins>
-            </build>
 
-            <repositories>
-                <repository>
-                    <id>spring-snapshots</id>
-                    <name>Spring Snapshots</name>
-                    <url>https://repo.spring.io/snapshot</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </repository>
-                <repository>
-                    <id>spring-milestones</id>
-                    <name>Spring Milestones</name>
-                    <url>https://repo.spring.io/milestone</url>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>spring-snapshots</id>
-                    <name>Spring Snapshots</name>
-                    <url>https://repo.spring.io/snapshot</url>
-                    <snapshots>
-                        <enabled>true</enabled>
-                    </snapshots>
-                </pluginRepository>
-                <pluginRepository>
-                    <id>spring-milestones</id>
-                    <name>Spring Milestones</name>
-                    <url>https://repo.spring.io/milestone</url>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </pluginRepository>
-            </pluginRepositories>
+    </dependencies>
 
-        </project>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>Brixton.BUILD-SNAPSHOT</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+</project>

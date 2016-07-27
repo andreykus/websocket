@@ -2,7 +2,7 @@ package com.bivgroup.websocket.app;
 
 
 import com.bivgroup.websocket.servlet.FileServlet;
-import com.bivgroup.websocket.websocket.WebsocketServer;
+import com.bivgroup.websocket.websocket.spring.WebSocketConfigure;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,9 +17,12 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.oauth2.config.annotation.web.configuration.ResourceServerConfigurerAdapter;
 import org.springframework.web.WebApplicationInitializer;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
+import org.springframework.web.servlet.DispatcherServlet;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.ServletRegistration;
 import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -41,11 +44,10 @@ import java.util.Properties;
 //@EnableTurbineStream
 //@EnableHystrixDashboard
 
-public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter implements WebApplicationInitializer {
+public class SogCabLifeApplication extends ResourceServerConfigurerAdapter implements WebApplicationInitializer {
 
     private static Logger logger = LogManager.getLogger(SogCabLifeApplication.class);
 
-    private static final String LOG4J_PROPS_PATH = "conf/log4j.properties";
     private static final String SERVER_PROPS_PATH = "conf/server.properties";
 
     @Autowired
@@ -54,6 +56,16 @@ public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter impl
     @Override
     public void onStartup(ServletContext servletContext) throws ServletException {
         servletContext.addServlet("dispatchServlet", new FileServlet());
+
+
+        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
+        ctx.register(WebSocketConfigure.class);
+        ctx.setServletContext(servletContext);
+        logger.debug("QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ {}", servletContext.getContextPath());
+        ServletRegistration.Dynamic dynamic = servletContext.addServlet("dispatcher", new DispatcherServlet(ctx));
+       //dynamic.addMapping("/asss");
+       // dynamic.setLoadOnStartup(1);
+
         //super.onStartup(servletContext);
     }
 
@@ -79,10 +91,15 @@ public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter impl
             System.out.println(beanName);
         }
 
+
         //PropertyConfigurator.configure(LOG4J_PROPS_PATH);
-        Properties wsProps = loadPropsFromFile(SERVER_PROPS_PATH);
-        WebsocketServer server = new WebsocketServer(wsProps);
-        server.run();
+// this init jetty websocket
+//        Properties wsProps = loadPropsFromFile(SERVER_PROPS_PATH);
+//        WebsocketServer server = new WebsocketServer(wsProps);
+//        server.run();
+
+
+
     }
 
 //    @Bean
@@ -237,15 +254,36 @@ public class SogCabLifeApplication  extends ResourceServerConfigurerAdapter impl
 //        return registration;
 //    }
 
+    /**
+     * bind servlet for site metadata (html,css,js ...)
+     * @return
+     */
     @Bean
     public ServletRegistrationBean metadataCatalogRegistration() {
         ServletRegistrationBean registration = new ServletRegistrationBean();
-        Map<String,String> params = new HashMap<String,String>();
-        params.put("basePath","c:/projects/bivsberfront/bivsberfront/AngularJS/B2BCIBGREEN/");
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("basePath", "C:/projects/websocket/metadata/target/generated-resources/static");
         registration.setName("fileServlet");
         registration.addUrlMappings("/html/*");
         registration.setInitParameters(params);
         registration.setServlet(new FileServlet());
+        return registration;
+    }
+
+    /**
+     * bind servlet for start websocket (sockJS)
+     * @return
+     */
+    @Bean
+    public ServletRegistrationBean webSocketRegistration() {
+        AnnotationConfigWebApplicationContext ctx = new AnnotationConfigWebApplicationContext();
+        ctx.register(WebSocketConfigure.class);
+        ServletRegistrationBean registration = new ServletRegistrationBean();
+        Map<String, String> params = new HashMap<String, String>();
+        registration.setName("websoketServlet");
+        registration.addUrlMappings("/websockets/*");
+        registration.setInitParameters(params);
+        registration.setServlet(new DispatcherServlet(ctx));
         return registration;
     }
 
