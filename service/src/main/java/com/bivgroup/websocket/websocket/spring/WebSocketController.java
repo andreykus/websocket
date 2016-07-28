@@ -1,5 +1,6 @@
 package com.bivgroup.websocket.websocket.spring;
 
+import org.apache.logging.log4j.LogManager;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.MessageHeaders;
 import org.springframework.messaging.handler.annotation.MessageExceptionHandler;
@@ -24,7 +25,7 @@ import java.util.Map;
  */
 @Controller
 public class WebSocketController {
-
+    private static org.apache.logging.log4j.Logger logger = LogManager.getLogger(WebSocketController.class);
     private final SimpMessageSendingOperations messagingTemplate;
 
     @Autowired
@@ -59,12 +60,12 @@ public class WebSocketController {
     }
 
     @Scheduled(fixedDelay=1500)
-    public void sendTradeNotifications() {
+    public void sendNotifications() {
 
         Map<String, Object> map = new HashMap<>();
         map.put(MessageHeaders.CONTENT_TYPE, MimeTypeUtils.APPLICATION_JSON);
-
-        this.messagingTemplate.convertAndSendToUser("user", "/topic/test", "object", map);
+        logger.info("WebSocketController");
+        //this.messagingTemplate.convertAndSendToUser("user", "/topic/test", "object", map);
 
 
 

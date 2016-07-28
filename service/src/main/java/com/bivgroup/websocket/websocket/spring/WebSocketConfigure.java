@@ -19,6 +19,8 @@ public class WebSocketConfigure extends AbstractWebSocketMessageBrokerConfigurer
     @Override
     public void configureMessageBroker(MessageBrokerRegistry config) {
         config.enableSimpleBroker("/topic");
+        //TODO this enabled StompBrokerRelayMessageHandler, uncomment in pom reactor-net and netty
+        //config.enableStompBrokerRelay("/topic");
         config.setApplicationDestinationPrefixes("/api");
     }
     @Override
